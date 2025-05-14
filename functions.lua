@@ -15,7 +15,7 @@ local poisonmap = {}
 function livingslimes.register_slime(name,def)
 	-- Skip unsupported slimes
 	if not def then
-		goto continue
+		return
 	end
 
 	-- Get slime technical name component
@@ -452,8 +452,6 @@ function livingslimes.register_slime(name,def)
 		spawn_in_nodes = false,
 		spawn_cap = def.spawn_cap,
 	})
-
-	::continue::
 end
 
 -- Override Creatura's default water physics; slimes must rise quickly in
